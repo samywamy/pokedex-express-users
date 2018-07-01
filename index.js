@@ -75,7 +75,7 @@ const getRoot = (request, response) => {
 			console.log('Query result:', result);
 
 			// redirect to home page
-			response.render('home', { pokemon: result.rows });
+			response.render('home', { pokemon: result.rows, id: request.cookies.user });
 		}
 	});
 }
